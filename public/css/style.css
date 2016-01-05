@@ -1,0 +1,563 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: Great Vibes;
+    src: url(vendor/fonts/great-vibes/GreatVibes-Regular.woff);
+}
+
+@font-face {
+    font-family: Segoe;
+    src: url(vendor/fonts/segoe/SEGOEUI.woff);
+}
+
+/*********************** SLIDER STYLES **********************/
+.center-grey{
+    background:#f2f2f2;
+}
+
+.slider{
+    position: relative;
+    padding: 5px;
+    width: 100%;
+    overflow: hidden;
+    height: 300px;
+    box-shadow: 0px 0px 15px #999;
+    margin: 20px 0px 20px 0px;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 15px #999;
+    width: 100%;
+    height: 100%;
+}
+
+.slide>img {
+    width: 100%;
+    height: 100%;
+}
+
+.arrows{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.arrows img{
+    height: 32px;
+}
+
+.slide.ng-hide-add, .slide.ng-hide-remove {
+    -webkit-transition:all linear 0.5s;
+    -moz-transition:all linear 0.5s;
+    -o-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+    display:block!important;
+}
+ 
+.slide.ng-hide-add.ng-hide-add-active,.slide.ng-hide-remove {
+    opacity:0;
+}
+ 
+.slide.ng-hide-add,.slide.ng-hide-remove.ng-hide-remove-active {
+    opacity:1;
+}
+
+/**************** MAIN APP STYLES *****************************/
+ul, li {
+    list-style-type: none;
+}
+
+span.error{
+    color: red;
+    font-family: Segoe;
+}
+
+div[role='alert'] {
+    float: left;
+    margin-top: 20px;
+}
+
+body, html {
+    position: relative;
+    overflow: hidden;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer>p{
+    margin: 0px;
+    font-family: Segoe;
+    color: #7b7567;
+}
+
+footer img{
+    width: 40px;
+    height: 40px;
+}
+
+li, li>span, a, a:hover, a:visited {
+    text-decoration: none;
+    color: #7b7567;
+}
+
+li>a {
+    color: #7b7567;
+}
+
+li>a:hover{
+    color: #7b7567;
+}
+
+li {
+    padding: 5px 0px 0px 0px;
+}
+
+html, body, #main, .mainContainer{
+    height: 100%;
+    width: 100%;
+}
+
+div#main {
+    background: url(../images/bodyBackground.png) repeat center fixed #f9f8f2;
+    position: relative;
+    overflow: auto;
+}
+
+#main, .mainContainer{
+    padding: 0px;
+}
+
+#header{    
+    height: 243px;
+    background: url(../images/header.png) repeat 0 center;
+}
+
+.mainContainer{
+    overflow: auto;
+}
+
+#centralContainer{
+    position: absolute; 
+    left: 50%;
+}
+
+#mainWrapper{
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    min-height: 85%;
+    overflow: hidden;
+    background: #fff;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    margin-bottom: 100px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#leftBar{
+    width: 25%;
+    height: 750px;
+    padding: 30px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0;
+}
+
+#guest {
+    position: absolute;
+    z-index: 10;
+    bottom: 0px;
+    margin-left: 35px;
+    left: 0px;
+    font-family: Segoe;
+    color: #7b7567;
+    border-top: solid 1px #b39458;
+    padding: 5px;
+    width: auto;
+}
+
+#leftBar, #weddingTitle{
+    float: left;
+}
+
+#leftBarImageSection>img {
+    width: 100%;
+    height: 100%;
+}
+
+#leftBarImageSection{
+    width: 100%;
+    height: 248px;
+    position: relative;
+    padding: 5px;
+    padding-top: 0px;
+}
+
+#weddingTitle{
+    width: 75%;
+}
+
+#weddingTitle{
+    font-family: Great Vibes;
+    color: #b39458;
+    height: 248px;
+    padding: 5px;
+    padding-left: 0px;
+    padding-top: 0px;
+}
+
+#weddingTitle>img {
+    width: 100%;
+    height: 100%;
+}
+
+#weddingWrapperHeader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 24px;
+}
+
+#weddingWrapperHeader h1 {
+    font-size: 50px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.remainingDate{
+    font-family: "Times", Arial, serif!important;
+    font-size: 19px;
+    font-style: italic;
+    display: inline-block;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.menuTitle{
+    font-family: Segoe;
+}
+
+li>.menuTitle {
+    color: #b39458;
+    font-size: 20px;
+    line-height: 37px;
+    display: block;
+    padding: 0px 0 7px 0;
+    margin: 0;
+}
+
+li>a{
+    font-size: 13px;
+    line-height: 20px;
+    font-style: italic;
+}
+
+#pageContainer{
+    float: left;
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    width: 70%;
+}
+
+div#dateIndicator {
+    position: absolute;
+    width: inherit;
+    display: table;
+    color: white;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#remainingIndicator{
+    position: absolute;
+    width: inherit;
+    display: table;
+    color: white;
+    top: 15px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.pageSection {
+    margin-bottom: 60px;
+    min-height: 300px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+.pageSection p {
+    font-family: Segoe;
+    color: #7b7567;
+    text-align: justify;
+}
+
+#homeInformation em {
+    font-family: "Times", Arial, serif!important;
+    font-size: 17px;
+    font-style: italic;
+    display: inline-block;
+    text-align: justify;
+    color: #b39458;
+    margin-top: 20px;
+}
+
+div#homeInformation {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    color: #b39458;
+    font-size: 20px;
+    width: 80%;
+    line-height: 37px;
+    display: block;
+    padding: 5px 0 7px 0;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+
+    #weddingWrapperHeader h1 {
+        font-size: 44px;
+    }
+
+    li {
+        padding: 0px 0px 0px 0px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    li {
+        padding: 0px 0px 0px 0px;
+    }
+
+}
+
+@media (max-width: 1080px) {
+
+    #weddingWrapperHeader h1 {
+        font-size: 44px;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    #leftBar {
+        display: none;
+    }
+
+    #weddingTitle, #pageContainer, #mainWrapper {
+        width: 100%;
+        padding: 0px;
+        padding-bottom: 20px;
+    }
+
+    .slider {
+        width: 80%;
+        position: absolute;
+        z-index: 2;
+        overflow: hidden;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        margin-bottom: 30px;
+        padding-left: 0px;
+        min-height: 300px;
+        padding: 0;
+    }
+
+    .slide {
+        position: relative;
+    }
+
+    #weddingTitle{
+        background: url(../images/header.png) repeat-x 0 center;
+    }
+
+}
+
+/***************** ABOUT SECTION *******************/
+
+#aboutSection>.title{
+    font-family: "Times", Arial, serif!important;
+    font-size: 19px;
+    font-style: italic;
+    display: inline-block;
+    text-align: center;
+    color: #b39458;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/************** MESSAGES SECTION **********************/
+
+form#messageForm {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 0;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.buttonContainer {
+    width: 95%;
+    position: relative;
+    overflow: hidden;
+}
+
+.buttonContainer p {
+    font-family: Segoe;
+    text-align: justify;
+    width: auto;
+    float: right;
+    margin-top: 20px;
+    margin-right: 15px;
+    color: red;
+}
+
+#emailSent {
+    color: black;
+}
+
+#messageForm input, #messageForm textarea {
+    width: 95%;
+    margin: 20px 0px 0px 0px;
+    padding: 10px;
+    font-family: Segoe;
+    color: #7b7567 !important;
+    text-align: justify;
+    font-size: 13px;
+    background-color: white !important;
+    float: left;
+}
+
+textarea#message {
+    min-height: 100px;
+    resize: vertical;
+    position: relative;
+}
+
+#messageForm button {
+    float: right;
+    margin-top: 15px;
+    background-color: #b39458;
+    color: white;
+    font-size: 13px;
+    width: 80px;
+    text-align: center;
+    padding: 5px;
+    font-family: segoe;
+}
+
+section#commentsSection {
+    width: 95%;
+    margin: 0px;
+}
+
+.commentHeader, .commentContent {
+    position: relative;
+    overflow: hidden;
+    color: #b39458;
+    font-size: 13px;
+    font-family: Segoe;
+}
+
+.commentHeader{
+    border-bottom: 1px dotted rgba(123, 117, 103, 0.4) !important;
+}
+
+.commentContent {
+    color: #7b7567;
+}
+
+p.commentTitle {
+    float: left;
+}
+
+p.commentTimestamp {
+    float: right;
+}
+
+.comment {
+    margin-top: 15px;
+}
+
+#squiresImages>div>img {
+    width: 100%;
+    height: 100%;
+    border: solid 2px #b39458;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+div#squiresImages, div#squiresSection {
+    padding: 0;
+}
+
+div#squiresImages{
+    padding-top:30px;
+}
+
+.squireImageContainer {
+    margin-bottom: 50px;
+}
+
+.cursiveTitle {
+    font-family: "Times", Arial, serif!important;
+    font-size: 19px;
+    font-style: italic;
+    display: inline-block;
+    text-align: center;
+    color: #b39458;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.squireImageContainer {
+    margin-bottom: 50px;
+    max-height: 150px;
+    height: 150px;
+}
+
+.boldTitle{
+    font-weight: bold;
+}
+
+/***************** DRESS SECTION ****************************/
+#dressSection img{
+    padding: 0;
+}
+
+/***************** CEREMONY SECTION ***********************/
+div#map {
+    width: 100%;
+    height: 500px;
+}

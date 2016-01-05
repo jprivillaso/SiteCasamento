@@ -1,0 +1,19 @@
+<span class="menuTitle sectionTitle">Confirmação da Presença</span>
+<div id="rsvpSection" class="pageSection" ng-controller="RsvpController">
+    <p>Favor confirmar presença ao receberem o convite de casamento</p>
+    <form id="messageForm" name="myForm">
+        <input placeholder="Nome" ng-model="name" name="name" id="name" type="text" required/>
+        <div role="alert">
+          <span class="error" ng-show="myForm.name.$error.required">*</span>
+        </div>
+        <input placeholder="Email" ng-model="email" name="email" id="email" type="text" required/>
+        <div role="alert">
+          <span class="error" ng-show="myForm.email.$error.required">*</span>
+        </div>
+        <div class="buttonContainer">
+            <button ng-click="confirmRsvp()">Enviar</button>
+            <p class="error"  ng-hide="myForm.$valid" ng-show="!emailSent">Preencha todos os campos!</p>
+            <p id="emailSent" ng-show="emailSent">Email enviado com sucesso!</p>
+        </div>
+    </form>
+</div>

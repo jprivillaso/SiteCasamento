@@ -1,0 +1,28 @@
+<span class="menuTitle sectionTitle">Mensagens aos Noivos</span>
+<div id="messagesSection" class="pageSection" ng-controller="MessagesController">
+    <form id="messageForm" name="myForm">
+        <input placeholder="Nome" ng-model="name" name="userName" id="name" type="text" required/>
+        <div role="alert">
+          <span class="error" ng-show="myForm.userName.$error.required">*</span>
+        </div>
+        <textarea placeholder="Mensagem" ng-model="content" name="message" id="message" required></textarea>
+        <div role="alert">
+          <span class="error" ng-show="myForm.message.$error.required">*</span>
+        </div>
+        <div class="buttonContainer">
+            <button ng-click="addComment()">Enviar</button>
+            <p class="error" ng-hide="myForm.$valid">Preencha todos os campos!</p>
+        </div>
+    </form>
+    <section id="commentsSection">
+        <div class="comment" ng-repeat="comment in comments | orderBy: 'id'">
+            <div class="commentHeader">
+                <p class="commentTitle">{{comment.name}}</p>
+                <p class="commentTimestamp">{{comment.date | date : DD/MM/YYYY}}</p>
+            </div>
+            <div class="commentContent">
+                <p>{{comment.content}}</p>
+            </div>
+        </div>
+    </section>
+</div>

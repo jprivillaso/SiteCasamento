@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marcia e João Paulo</title>
+        <link rel="stylesheet" type="text/css" href="css/vendor/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="js/vendor/angular/angular.min.js"></script>
+    </head>
+    <body ng-app="WeddingApp">
+        <div id="main" class="col-sm-12 col-md-12 col-lg-12">
+            <section class="mainContainer col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="header" class="col-sm-12 col-md-12 col-lg-12">
+                </div>
+                <div id="containerBackground" class="col-sm-12 col-md-12 col-lg-12">
+                </div>
+                <div id="mainWrapper" class="col-xs-12 col-sm-8 col-md-8 col-lg-8" ng-controller="MainController">
+                    <div id="leftBar">
+                        <p id="guest" ng-bind="guest"></p>
+                        <div id="leftBarImageSection">
+                            <img src="../images/faces.jpg" />
+                            <div id="dateIndicator">
+                                <h1 class="remainingDate" ng-bind="weedingDate"></h1>
+                            </div>
+                            <div id="remainingIndicator">
+                                <h1 class="remainingDate" ng-bind="remainingDate"></h1>
+                            </div>
+                        </div>
+                        <div class="menuTitle">
+                            <ul>
+                                <li>
+                                    <span class="menuTitle">Menu</span>
+                                </li>
+                                <li>
+                                    <a href="#/home">Página Inicial</a>
+                                </li>
+                                <li>
+                                    <a href="#/about">A história dos noivos</a>
+                                </li>
+                                <li>
+                                    <a href="#/messages">Mensagens aos noivos</a>
+                                </li>
+                                <li>
+                                    <a href="#/rsvp">Confirmação de Presença</a>
+                                </li>
+                                <li>
+                                    <a href="#/ceremony">Cerimônia Religiosa</a>
+                                </li>
+                                <li>
+                                    <a href="#/bestman">Sobre os Padrinhos</a>
+                                </li>
+                                <li>
+                                    <a href="#/squires">Daminhas e Pajens</a>
+                                </li>
+                                <li>
+                                    <a href="#/dress">Na barra do vestido</a>
+                                </li>
+                                <li>
+                                    <a href="#/hashtag">#Hashtag</a>
+                                </li>
+                                <li>
+                                    <span class="menuTitle">Presentes</span>
+                                </li>
+                                <li>
+                                    <a href="#/gifts">Lista de Presentes</a>
+                                </li>
+                                <li>
+                                    <span class="menuTitle">Álbuns</span>
+                                </li>
+                                <li>
+                                    <a href="#/album">Márcia e João Paulo</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="weddingTitle">
+                        <img  src="../images/flowers.jpg"/>
+                        <div id="weddingWrapperHeader">
+                            <h1>Marcia e Jõao Paulo</h1>
+                        </div>
+                    </div>
+                    <div id="pageContainer">
+                        <div class="view" ng-view></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <p>&copy; Juan Pablo Rivillas</p>
+            <a href="https://www.facebook.com/juan.p.rivillas"><img src="../images/fb.png"/></a>
+            <a href="http://www.twitter.com/jprivillaso"><img src="../images/twitter.png"/></a>
+            <a href="https://br.linkedin.com/in/juan-pablo-rivillas-672ba761"><img src="../images/linkedin.png"/></a>
+            <p>Faça seu orçamento!</p>
+        </footer>
+        <!-- Vendor Scripts -->
+        <script type="text/javascript" src="js/vendor/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript" src="js/vendor/angular-animate/angular-animate.min.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/vendor/lodash/lodash.min.js"></script>
+        <script type="text/javascript" src="js/vendor/moment/moment-with-locales.min.js"></script>
+        <script type="text/javascript" src="js/vendor/google-maps/google-maps.js"></script>
+        <!-- Custom Scripts -->
+        <script type="text/javascript" src="js/app.js"></script>
+        <!-- Controllers -->
+        <script type="text/javascript" src="js/controllers/MainController.js"></script>
+        <script type="text/javascript" src="js/controllers/HomeController.js"></script>
+        <script type="text/javascript" src="js/controllers/AboutController.js"></script>
+        <script type="text/javascript" src="js/controllers/BestmanController.js"></script>
+        <script type="text/javascript" src="js/controllers/MessagesController.js"></script>
+        <script type="text/javascript" src="js/controllers/CeremonyController.js"></script>
+        <script type="text/javascript" src="js/controllers/DressController.js"></script>
+        <script type="text/javascript" src="js/controllers/GiftsController.js"></script>
+        <script type="text/javascript" src="js/controllers/SquiresController.js"></script>
+        <script type="text/javascript" src="js/controllers/RsvpController.js"></script>
+        <script type="text/javascript" src="js/controllers/AlbumController.js"></script>
+        <script type="text/javascript" src="js/controllers/HashtagController.js"></script>
+        <!-- Services -->
+        <script type="text/javascript" src="js/services/Comments.js"></script>
+        <script type="text/javascript" src="js/services/Guests.js"></script>
+        <script type="text/javascript" src="js/services/Email.js"></script>
+        <!-- Directives -->
+        <script type="text/javascript" src="js/directives/SliderDirective.js"></script>
+        <script type="text/javascript" src="js/directives/AudioDirective.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSfurjKOjKFdPKh4_SrEIh5JeA1wliEo4&callback=initMap"></script>
+    </body>
+</hmtl>
