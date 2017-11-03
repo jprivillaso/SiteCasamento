@@ -6,16 +6,16 @@ var handleSayHello = function(req, res) {
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: 'jprivillaso@hotmail.com', // Your email id
-            pass: 'riv.8inheaven..' // Your password
+            user: 'email', // Your email id
+            pass: 'passwrd' // Your password
         }
     });
 
     var text = 'Hello world from \n\n Juan';
 
     var mailOptions = {
-        from: 'jprivillaso@hotmail.com', // sender address
-        to: 'jprivillaso@gmail.com', // list of receivers
+        from: 'email', // sender address
+        to: 'email', // list of receivers
         subject: 'Email Example', // Subject line
         text: text //, // plaintext body
     };
